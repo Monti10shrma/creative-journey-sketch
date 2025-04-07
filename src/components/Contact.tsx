@@ -114,7 +114,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Email</h3>
-                  <p className="text-portfolio-muted">hello@example.com</p>
+                  <p className="text-portfolio-muted">manvendersharma412@gmail.com</p>
                 </div>
               </div>
               
@@ -124,7 +124,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Phone</h3>
-                  <p className="text-portfolio-muted">+1 (555) 123-4567</p>
+                  <p className="text-portfolio-muted">+91 9639111134</p>
                 </div>
               </div>
               
@@ -134,7 +134,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Location</h3>
-                  <p className="text-portfolio-muted">San Francisco, CA</p>
+                  <p className="text-portfolio-muted">Meerut, India</p>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/manvendra-sharma-66a503253"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-portfolio-card border border-portfolio-border hover:border-portfolio-accent transition-all"

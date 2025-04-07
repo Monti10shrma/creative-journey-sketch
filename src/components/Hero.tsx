@@ -15,10 +15,10 @@ const Hero = () => {
         <div className="max-w-3xl animate-slideUp">
           <p className="text-portfolio-accent mb-2 font-mono">Hello, I'm</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            John Doe
+            Manvendra Sharma
           </h1>
           <h2 className="text-2xl md:text-3xl text-portfolio-muted mb-6">
-            Full-Stack Developer & UI/UX Designer
+            Full-Stack Developer
           </h2>
           <p className="text-lg mb-8 text-portfolio-muted max-w-2xl">
             I build exceptional digital experiences that are fast, accessible,
@@ -48,7 +48,7 @@ const Hero = () => {
                 <Github className="h-6 w-6" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/manvendra-sharma-66a503253" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-portfolio-accent transition-colors"
@@ -56,7 +56,7 @@ const Hero = () => {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
-                href="mailto:hello@example.com"
+                href="mailto:manvendersharma412@gmail.com"
                 className="hover:text-portfolio-accent transition-colors"
               >
                 <Mail className="h-6 w-6" />
