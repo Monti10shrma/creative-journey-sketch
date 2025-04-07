@@ -110,24 +110,26 @@
     @apply text-portfolio-accent;
   }
   
-  /* Floating particles animation */
+  /* Enhanced floating particles animation */
   @keyframes floatParticle {
     0% {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0) rotate(0deg);
       opacity: 0.1;
     }
     25% {
+      transform: translateY(-15px) translateX(10px) rotate(5deg);
       opacity: 0.3;
     }
     50% {
-      transform: translateY(-20px) translateX(10px);
+      transform: translateY(-25px) translateX(15px) rotate(10deg);
       opacity: 0.1;
     }
     75% {
+      transform: translateY(-10px) translateX(5px) rotate(5deg);
       opacity: 0.3;
     }
     100% {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0) rotate(0deg);
       opacity: 0.1;
     }
   }

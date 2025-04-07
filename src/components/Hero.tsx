@@ -31,37 +31,62 @@ const Hero = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div ref={backgroundRef} className="absolute w-full h-full">
-          {/* Large gradient blob */}
-          <div className="absolute top-1/2 -right-64 md:right-0 w-[500px] h-[500px] rounded-full opacity-10 bg-portfolio-accent blur-[120px] animate-pulse" />
+          {/* Large gradient blobs with varied colors */}
+          <div className="absolute top-1/2 -right-64 md:right-0 w-[500px] h-[500px] rounded-full opacity-20 bg-gradient-to-br from-purple-500 to-blue-500 blur-[120px] animate-pulse" 
+               style={{animationDuration: '15s'}} />
           
-          {/* Additional animated shapes */}
-          <div className="absolute top-1/4 left-1/4 w-[200px] h-[200px] rounded-full opacity-5 bg-blue-400 blur-[80px] animate-pulse" 
+          <div className="absolute bottom-1/3 -left-32 md:left-10 w-[400px] h-[400px] rounded-full opacity-15 bg-gradient-to-tr from-pink-500 to-orange-400 blur-[100px] animate-pulse" 
+               style={{animationDuration: '17s'}} />
+          
+          {/* Additional animated shapes with smaller, varied colors */}
+          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] rounded-full opacity-10 bg-gradient-to-r from-cyan-400 to-blue-400 blur-[80px] animate-pulse" 
                style={{animationDuration: '7s'}} />
                
-          <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] rounded-full opacity-5 bg-purple-500 blur-[100px] animate-pulse" 
+          <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full opacity-10 bg-gradient-to-l from-violet-500 to-purple-500 blur-[100px] animate-pulse" 
                style={{animationDuration: '13s'}} />
                
-          <div className="absolute top-3/4 left-1/3 w-[250px] h-[250px] rounded-full opacity-5 bg-green-400 blur-[90px] animate-pulse" 
+          <div className="absolute top-3/4 left-1/3 w-[300px] h-[300px] rounded-full opacity-10 bg-gradient-to-tr from-green-400 to-teal-500 blur-[90px] animate-pulse" 
                style={{animationDuration: '11s'}} />
+               
+          <div className="absolute top-1/3 right-1/3 w-[250px] h-[250px] rounded-full opacity-10 bg-gradient-to-bl from-amber-400 to-yellow-500 blur-[85px] animate-pulse" 
+               style={{animationDuration: '9s'}} />
         </div>
       </div>
       
-      {/* Animated particles */}
+      {/* Animated particles with varied colors */}
       <div className="absolute inset-0 z-0">
-        {Array.from({ length: 20 }).map((_, index) => (
-          <div
-            key={index}
-            className="absolute rounded-full bg-portfolio-accent opacity-10"
-            style={{
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `floatParticle ${Math.random() * 10 + 10}s linear infinite`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
+        {Array.from({ length: 25 }).map((_, index) => {
+          // Create an array of particle colors
+          const particleColors = [
+            'bg-blue-400', 
+            'bg-purple-400', 
+            'bg-pink-400', 
+            'bg-green-400', 
+            'bg-yellow-400',
+            'bg-cyan-400',
+            'bg-amber-400',
+            'bg-rose-400',
+            'bg-emerald-400'
+          ];
+          
+          // Select a random color for each particle
+          const randomColor = particleColors[Math.floor(Math.random() * particleColors.length)];
+          
+          return (
+            <div
+              key={index}
+              className={`absolute rounded-full opacity-10 ${randomColor}`}
+              style={{
+                width: `${Math.random() * 12 + 4}px`,
+                height: `${Math.random() * 12 + 4}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animation: `floatParticle ${Math.random() * 10 + 10}s linear infinite`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            />
+          );
+        })}
       </div>
       
       <div className="container mx-auto relative z-10">
