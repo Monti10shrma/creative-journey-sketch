@@ -28,45 +28,57 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex flex-col justify-center pt-16 relative overflow-hidden"
     >
-      {/* Animated background elements */}
+      {/* Enhanced animated background elements with vibrant colors */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div ref={backgroundRef} className="absolute w-full h-full">
-          {/* Large gradient blobs with varied colors */}
-          <div className="absolute top-1/2 -right-64 md:right-0 w-[500px] h-[500px] rounded-full opacity-20 bg-gradient-to-br from-purple-500 to-blue-500 blur-[120px] animate-pulse" 
+          {/* Large gradient blobs with more vibrant and varied colors */}
+          <div className="absolute top-1/2 -right-64 md:right-0 w-[500px] h-[500px] rounded-full opacity-20 bg-gradient-to-br from-violet-600 to-blue-500 blur-[120px] animate-pulse" 
                style={{animationDuration: '15s'}} />
           
-          <div className="absolute bottom-1/3 -left-32 md:left-10 w-[400px] h-[400px] rounded-full opacity-15 bg-gradient-to-tr from-pink-500 to-orange-400 blur-[100px] animate-pulse" 
+          <div className="absolute bottom-1/3 -left-32 md:left-10 w-[400px] h-[400px] rounded-full opacity-15 bg-gradient-to-tr from-pink-600 to-orange-500 blur-[100px] animate-pulse" 
                style={{animationDuration: '17s'}} />
           
-          {/* Additional animated shapes with smaller, varied colors */}
-          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] rounded-full opacity-10 bg-gradient-to-r from-cyan-400 to-blue-400 blur-[80px] animate-pulse" 
+          {/* Additional animated shapes with brighter, more varied colors */}
+          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] rounded-full opacity-15 bg-gradient-to-r from-cyan-500 to-blue-600 blur-[80px] animate-pulse" 
                style={{animationDuration: '7s'}} />
                
-          <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full opacity-10 bg-gradient-to-l from-violet-500 to-purple-500 blur-[100px] animate-pulse" 
+          <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full opacity-15 bg-gradient-to-l from-violet-600 to-purple-700 blur-[100px] animate-pulse" 
                style={{animationDuration: '13s'}} />
                
-          <div className="absolute top-3/4 left-1/3 w-[300px] h-[300px] rounded-full opacity-10 bg-gradient-to-tr from-green-400 to-teal-500 blur-[90px] animate-pulse" 
+          <div className="absolute top-3/4 left-1/3 w-[300px] h-[300px] rounded-full opacity-15 bg-gradient-to-tr from-green-500 to-teal-600 blur-[90px] animate-pulse" 
                style={{animationDuration: '11s'}} />
                
-          <div className="absolute top-1/3 right-1/3 w-[250px] h-[250px] rounded-full opacity-10 bg-gradient-to-bl from-amber-400 to-yellow-500 blur-[85px] animate-pulse" 
+          <div className="absolute top-1/3 right-1/3 w-[250px] h-[250px] rounded-full opacity-15 bg-gradient-to-bl from-amber-500 to-yellow-600 blur-[85px] animate-pulse" 
                style={{animationDuration: '9s'}} />
+
+          {/* New additional vibrant elements */}
+          <div className="absolute top-2/3 right-1/2 w-[270px] h-[270px] rounded-full opacity-10 bg-gradient-to-tl from-rose-500 to-red-600 blur-[95px] animate-pulse" 
+               style={{animationDuration: '14s'}} />
+               
+          <div className="absolute bottom-2/3 left-1/2 w-[320px] h-[320px] rounded-full opacity-10 bg-gradient-to-br from-blue-600 to-indigo-700 blur-[110px] animate-pulse" 
+               style={{animationDuration: '12s'}} />
         </div>
       </div>
       
-      {/* Animated particles with varied colors */}
+      {/* Animated particles with enhanced vibrant colors */}
       <div className="absolute inset-0 z-0">
-        {Array.from({ length: 25 }).map((_, index) => {
-          // Create an array of particle colors
+        {Array.from({ length: 30 }).map((_, index) => {
+          // Create an array of vibrant particle colors
           const particleColors = [
-            'bg-blue-400', 
-            'bg-purple-400', 
-            'bg-pink-400', 
-            'bg-green-400', 
-            'bg-yellow-400',
-            'bg-cyan-400',
-            'bg-amber-400',
-            'bg-rose-400',
-            'bg-emerald-400'
+            'bg-blue-500', 
+            'bg-purple-500', 
+            'bg-pink-500', 
+            'bg-green-500', 
+            'bg-yellow-500',
+            'bg-cyan-500',
+            'bg-amber-500',
+            'bg-rose-500',
+            'bg-emerald-500',
+            'bg-violet-500',
+            'bg-indigo-500',
+            'bg-fuchsia-500',
+            'bg-lime-500',
+            'bg-orange-500',
           ];
           
           // Select a random color for each particle
@@ -75,7 +87,7 @@ const Hero = () => {
           return (
             <div
               key={index}
-              className={`absolute rounded-full opacity-10 ${randomColor}`}
+              className={`absolute rounded-full opacity-15 ${randomColor}`}
               style={{
                 width: `${Math.random() * 12 + 4}px`,
                 height: `${Math.random() * 12 + 4}px`,
